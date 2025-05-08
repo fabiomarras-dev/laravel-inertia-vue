@@ -8,6 +8,7 @@ defineOptions({ layout: Layout});
 </script>
 
 <template>
+    <Head title="About" />
     <div>
         <h1 class="text-3xl font-bold underline">About {{ user }}</h1>
     </div>
