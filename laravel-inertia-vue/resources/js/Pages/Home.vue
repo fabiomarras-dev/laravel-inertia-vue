@@ -5,9 +5,9 @@ defineOptions({ layout: Layout});
 </script>
 
 <template>
-    <Head title="Home" />
+    <Head :title="$page.component" />
         <div>
-            <h1 class="text-3xl font-bold underline">Hello</h1>
+            <h1 class="text-3xl font-bold underline">{{ $page.component }}</h1>
         </div>
 </template>
 
