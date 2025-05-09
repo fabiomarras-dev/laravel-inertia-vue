@@ -7,7 +7,7 @@ defineOptions({ layout: Layout});
 <template>
     <Head :title="$page.component" />
         <div>
-            <h1 class="text-3xl font-bold underline">{{ $page.component }}</h1>
+            <h1>{{ $page.component }}</h1>
         </div>
 </template>
 
