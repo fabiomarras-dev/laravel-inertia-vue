@@ -1,20 +1,32 @@
 <script setup>
-import { reactive } from 'vue';
-import { router } from '@inertiajs/vue3';
+//import { reactive } from 'vue';
+//import { router } from '@inertiajs/vue3';
+import { useForm } from '@inertiajs/vue3';
 import Layout from '../../Layouts/Layout.vue';
 
 defineOptions({ layout: Layout});
 
-const form = reactive({
+/* const form = reactive({
     name: null,
     email: null,
     password: null,
     password_confirmation: null,
-});
+}); */
+
+const form = useForm({
+    name: null,
+    email: null,
+    password: null,
+    password_confirmation: null,
+}); 
 
 const submit =() => {
     //console.log(form);
-    router.post('/register', form);
+    //router.post('/register', form);
+
+    form.post('/register', {
+        onError: () => form.reset('password', 'password_confirmation'),
+    });
 }
 </script>
 
@@ -31,16 +43,19 @@ const submit =() => {
             <div class="mb-6">
                 <label>Name</label>
                 <input type="text" v-model="form.name"/>
+                <small>{{ form.errors.name }}</small>
             </div>
 
             <div class="mb-6">
                 <label>Email</label>
                 <input type="text" v-model="form.email"/>
+                <small>{{ form.errors.email }}</small>
             </div>
 
             <div class="mb-6">
                 <label>Password</label>
                 <input type="password" v-model="form.password"/>
+                <small>{{ form.errors.password }}</small>
             </div>
 
             <div class="mb-6">
