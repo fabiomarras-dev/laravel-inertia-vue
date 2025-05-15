@@ -1,5 +1,6 @@
 <script setup>
 import { reactive } from 'vue';
+import { router } from '@inertiajs/vue3';
 import Layout from '../../Layouts/Layout.vue';
 
 defineOptions({ layout: Layout});
@@ -12,7 +13,8 @@ const form = reactive({
 });
 
 const submit =() => {
-    console.log(form);
+    //console.log(form);
+    router.post('/register', form);
 }
 </script>
 
@@ -47,7 +49,7 @@ const submit =() => {
             </div>
 
             <div>
-                <p class="text-slate-600 mb-2">Already a user?</p>
+                <p class="text-slate-600 mb-2">Already a user? <a class="text-link">Login</a></p>
                 <button class="primary-btn">Register</button>
             </div>
 
