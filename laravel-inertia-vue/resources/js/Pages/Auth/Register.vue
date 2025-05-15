@@ -2,9 +2,7 @@
 //import { reactive } from 'vue';
 //import { router } from '@inertiajs/vue3';
 import { useForm } from '@inertiajs/vue3';
-import Layout from '../../Layouts/Layout.vue';
 
-defineOptions({ layout: Layout});
 
 /* const form = reactive({
     name: null,
