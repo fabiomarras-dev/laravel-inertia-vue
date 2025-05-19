@@ -71,7 +71,7 @@ const submit =() => {
                 :message="form.errors.password"
              />
 
-            <!-- <div class="mb-6">
+            <!--<div class="mb-6">
                 <label>Password</label>
                 <input type="password" v-model="form.password"/>
                 <small>{{ form.errors.password }}</small>
@@ -80,7 +80,7 @@ const submit =() => {
             <TextInput 
                 name="confirm password" 
                 type="password"
-                v-model="form.name" 
+                v-model="form.password_confirmation" 
              />
 
             <!-- <div class="mb-6">
