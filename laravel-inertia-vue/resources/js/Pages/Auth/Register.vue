@@ -92,7 +92,7 @@ const submit =() => {
 
 
             <div>
-                <p class="text-slate-600 mb-2">Already a user? <a class="text-link">Login</a></p>
+                <p class="text-slate-600 mb-2">Already a user? <a class="text-link" :href="route('login')">Login</a></p>
                 <button class="primary-btn">Register</button>
             </div>
 

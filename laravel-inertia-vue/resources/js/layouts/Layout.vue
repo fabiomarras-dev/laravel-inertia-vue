@@ -16,6 +16,11 @@ import { route } from '../../../vendor/tightenco/ziggy/src/js';
                 <div class="space-x-6">
                     <Link :href="route('register')" class="nav-link" >Register</Link>
                 </div>
+
+                <div class="space-x-6">
+                    <Link :href="route('login')" class="nav-link" >Login</Link>
+                </div>
+
             </nav>
         </header>
         <main class="p-4">
