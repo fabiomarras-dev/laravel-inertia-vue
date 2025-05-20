@@ -49,7 +49,7 @@ const submit =() => {
 
             <div>
                 <p class="text-slate-600 mb-2">Need an account? <a class="text-link" :href="route('register')">Register</a></p>
-                <button class="primary-btn">Register</button>
+                <button class="primary-btn">Login</button>
             </div>
 
         </form>
