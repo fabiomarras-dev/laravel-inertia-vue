@@ -49,12 +49,11 @@ const getDate = (date) => new Date(date).toLocaleDateString("en-us", {
                     class="p-1 mx-1"
                     ></Link>
                     -->
-
-                    <PaginationLinks :paginator="users"/>
-                    
                 </div>
-
             </table>
+
+             <PaginationLinks :paginator="users"/>
+             
         </div>
 </template>
 
