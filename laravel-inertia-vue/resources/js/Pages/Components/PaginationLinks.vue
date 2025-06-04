@@ -7,9 +7,9 @@ defineProps({
 });
 
 const makeLabel = (label) => {
-    if (label.includes('Previous')){
+    if (label.includes('Previous')) {
         return "<<";
-    } else if (label.includes('Next')){
+    } else if (label.includes('Next')) {
         return ">>";
     } else {
         return label;
@@ -27,8 +27,12 @@ const makeLabel = (label) => {
                 :is="link.url ? 'Link' : 'span'"
                 :href="link.url"
                 v-html="makeLabel(link.label)"
-                class="border-x border-slate-50 w-12 h-12 place-items-center bg-white"
-                :ckass="{ ' hover:bg-slate-300' : link.url , 'text-zinc-400' : !link.url , 'font-bold text-blue-500' : link.active }"
+                class="border-x border-slate-50 w-12 h-12 grid place-items-center bg-white"
+                :class="{ 
+                    'hover:bg-slate-300' : link.url, 
+                    'text-zinc-400' : !link.url, 
+                    'font-bold text-blue-500' : link.active, 
+                    }"
                 />
 
             </div>
