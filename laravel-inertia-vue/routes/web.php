@@ -3,6 +3,7 @@
 use App\Http\Controllers\AuthController;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 //use Inertia\Inertia;
 
@@ -20,6 +21,10 @@ Route::get('/', function(Request $request){
         })->paginate(5)->withQueryString(),
 
         'searchTerm' => $request->search,
+
+        'can' => [
+            'delete_user' => Auth::user() ? Auth::user()->can('delete', User::class) : null
+        ]
     ]);
 })->name('home');
 
